@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fristech</title>
+    <link rel="stylesheet" href="./final.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <script src="./anime.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.5.0/dist/css/splide.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.5.0/dist/css/themes/splide-skyblue.min.css"
+    />
+  </head>
+  <body class="bg-slate-50">
+    <!-- landing -->
+    <div
+      class="landing flex justify-center items-center h-full w-full bg-slate-900 transition-all fixed z-50"
+    >
+      <a
+        class="flex justify-center items-center cursor-pointer"
+        onclick="toNav()"
+      >
+        <i class="fa fa-arrow-up text-slate-900" aria-hidden="true"></i>
+      </a>
+      <div
+        class="rectangular relative w-16 h-8 sm:w-24 sm:h-12 md:w-32 md:h-16 rounded-sm border-4 border-yellow-500"
+      ></div>
+      <svg
+        class="fristech w-[15rem] h-[3rem] sm:w-[20rem] sm:h-[4rem] md:w-[30rem] md:h-[6rem]"
+        viewBox="0 0 470 96"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <mask
+          id="path-1-outside-1_2_5"
+          maskUnits="userSpaceOnUse"
+          x="0.454544"
+          y="0.727272"
+          width="469"
+          height="95"
+          fill="black"
+        >
+          <rect
+            fill="white"
+            x="0.454544"
+            y="0.727272"
+            width="469"
+            height="95"
+          />
+          <path
+            d="M3.45454 91V21.1818H45.3182V28.6818H11.9091V52.2727H42.1818V59.7727H11.9091V91H3.45454Z"
+          />
+          <path
+            d="M59.7983 91V21.1818H83.3892C88.8438 21.1818 93.321 22.1136 96.821 23.9773C100.321 25.8182 102.912 28.3523 104.594 31.5795C106.276 34.8068 107.116 38.4773 107.116 42.5909C107.116 46.7045 106.276 50.3523 104.594 53.5341C102.912 56.7159 100.332 59.2159 96.8551 61.0341C93.3778 62.8295 88.9347 63.7273 83.5256 63.7273H64.4347V56.0909H83.2528C86.9801 56.0909 89.9801 55.5455 92.2528 54.4545C94.5483 53.3636 96.2074 51.8182 97.2301 49.8182C98.2756 47.7955 98.7983 45.3864 98.7983 42.5909C98.7983 39.7955 98.2756 37.3523 97.2301 35.2614C96.1847 33.1705 94.5142 31.5568 92.2188 30.4205C89.9233 29.2614 86.8892 28.6818 83.1165 28.6818H68.2528V91H59.7983ZM92.6619 59.6364L109.844 91H100.026L83.1165 59.6364H92.6619Z"
+          />
+          <path d="M129.659 21.1818V91H121.205V21.1818H129.659Z" />
+          <path
+            d="M184.793 38.6364C184.384 35.1818 182.724 32.5 179.815 30.5909C176.906 28.6818 173.338 27.7273 169.111 27.7273C166.02 27.7273 163.315 28.2273 160.997 29.2273C158.702 30.2273 156.906 31.6023 155.611 33.3523C154.338 35.1023 153.702 37.0909 153.702 39.3182C153.702 41.1818 154.145 42.7841 155.031 44.125C155.94 45.4432 157.099 46.5455 158.509 47.4318C159.918 48.2955 161.395 49.0114 162.94 49.5795C164.486 50.125 165.906 50.5682 167.202 50.9091L174.293 52.8182C176.111 53.2955 178.134 53.9545 180.361 54.7955C182.611 55.6364 184.759 56.7841 186.804 58.2386C188.872 59.6705 190.577 61.5114 191.918 63.7614C193.259 66.0114 193.929 68.7727 193.929 72.0455C193.929 75.8182 192.94 79.2273 190.963 82.2727C189.009 85.3182 186.145 87.7386 182.372 89.5341C178.622 91.3295 174.065 92.2273 168.702 92.2273C163.702 92.2273 159.372 91.4205 155.713 89.8068C152.077 88.1932 149.213 85.9432 147.122 83.0568C145.054 80.1705 143.884 76.8182 143.611 73H152.338C152.565 75.6364 153.452 77.8182 154.997 79.5455C156.565 81.25 158.543 82.5227 160.929 83.3636C163.338 84.1818 165.929 84.5909 168.702 84.5909C171.929 84.5909 174.827 84.0682 177.395 83.0227C179.963 81.9545 181.997 80.4773 183.497 78.5909C184.997 76.6818 185.747 74.4545 185.747 71.9091C185.747 69.5909 185.099 67.7045 183.804 66.25C182.509 64.7955 180.804 63.6136 178.69 62.7045C176.577 61.7955 174.293 61 171.838 60.3182L163.247 57.8636C157.793 56.2955 153.474 54.0568 150.293 51.1477C147.111 48.2386 145.52 44.4318 145.52 39.7273C145.52 35.8182 146.577 32.4091 148.69 29.5C150.827 26.5682 153.69 24.2955 157.281 22.6818C160.895 21.0455 164.929 20.2273 169.384 20.2273C173.884 20.2273 177.884 21.0341 181.384 22.6477C184.884 24.2386 187.656 26.4205 189.702 29.1932C191.77 31.9659 192.861 35.1136 192.974 38.6364H184.793Z"
+          />
+          <path
+            d="M205.17 13.1023V3.72727H270.625V13.1023H243.182V91H232.614V13.1023H205.17Z"
+          />
+          <path
+            d="M284.822 91V21.1818H326.958V28.6818H293.276V52.2727H324.776V59.7727H293.276V83.5H327.504V91H284.822Z"
+          />
+          <path
+            d="M398.379 43H389.924C389.424 40.5682 388.549 38.4318 387.299 36.5909C386.072 34.75 384.572 33.2045 382.799 31.9545C381.049 30.6818 379.106 29.7273 376.969 29.0909C374.833 28.4545 372.606 28.1364 370.288 28.1364C366.06 28.1364 362.231 29.2045 358.799 31.3409C355.39 33.4773 352.674 36.625 350.651 40.7841C348.651 44.9432 347.651 50.0455 347.651 56.0909C347.651 62.1364 348.651 67.2386 350.651 71.3977C352.674 75.5568 355.39 78.7045 358.799 80.8409C362.231 82.9773 366.06 84.0455 370.288 84.0455C372.606 84.0455 374.833 83.7273 376.969 83.0909C379.106 82.4545 381.049 81.5114 382.799 80.2614C384.572 78.9886 386.072 77.4318 387.299 75.5909C388.549 73.7273 389.424 71.5909 389.924 69.1818H398.379C397.742 72.75 396.583 75.9432 394.901 78.7614C393.219 81.5795 391.129 83.9773 388.629 85.9545C386.129 87.9091 383.322 89.3977 380.208 90.4205C377.117 91.4432 373.81 91.9545 370.288 91.9545C364.333 91.9545 359.038 90.5 354.401 87.5909C349.765 84.6818 346.117 80.5455 343.458 75.1818C340.799 69.8182 339.469 63.4545 339.469 56.0909C339.469 48.7273 340.799 42.3636 343.458 37C346.117 31.6364 349.765 27.5 354.401 24.5909C359.038 21.6818 364.333 20.2273 370.288 20.2273C373.81 20.2273 377.117 20.7386 380.208 21.7614C383.322 22.7841 386.129 24.2841 388.629 26.2614C391.129 28.2159 393.219 30.6023 394.901 33.4205C396.583 36.2159 397.742 39.4091 398.379 43Z"
+          />
+          <path
+            d="M412.04 91V21.1818H420.495V52.2727H457.722V21.1818H466.177V91H457.722V59.7727H420.495V91H412.04Z"
+          />
+        </mask>
+        <path
+          d="M3.45454 91V21.1818H45.3182V28.6818H11.9091V52.2727H42.1818V59.7727H11.9091V91H3.45454Z"
+          stroke="#fff"
+          stroke-width="6"
+          mask="url(#path-1-outside-1_2_5)"
+        />
+        <path
+          d="M59.7983 91V21.1818H83.3892C88.8438 21.1818 93.321 22.1136 96.821 23.9773C100.321 25.8182 102.912 28.3523 104.594 31.5795C106.276 34.8068 107.116 38.4773 107.116 42.5909C107.116 46.7045 106.276 50.3523 104.594 53.5341C102.912 56.7159 100.332 59.2159 96.8551 61.0341C93.3778 62.8295 88.9347 63.7273 83.5256 63.7273H64.4347V56.0909H83.2528C86.9801 56.0909 89.9801 55.5455 92.2528 54.4545C94.5483 53.3636 96.2074 51.8182 97.2301 49.8182C98.2756 47.7955 98.7983 45.3864 98.7983 42.5909C98.7983 39.7955 98.2756 37.3523 97.2301 35.2614C96.1847 33.1705 94.5142 31.5568 92.2188 30.4205C89.9233 29.2614 86.8892 28.6818 83.1165 28.6818H68.2528V91H59.7983ZM92.6619 59.6364L109.844 91H100.026L83.1165 59.6364H92.6619Z"
+          stroke="#fff"
+          stroke-width="6"
+          mask="url(#path-1-outside-1_2_5)"
+        />
+        <path
+          d="M129.659 21.1818V91H121.205V21.1818H129.659Z"
+          stroke="#fff"
+          stroke-width="6"
+          mask="url(#path-1-outside-1_2_5)"
+        />
+        <path
+          d="M184.793 38.6364C184.384 35.1818 182.724 32.5 179.815 30.5909C176.906 28.6818 173.338 27.7273 169.111 27.7273C166.02 27.7273 163.315 28.2273 160.997 29.2273C158.702 30.2273 156.906 31.6023 155.611 33.3523C154.338 35.1023 153.702 37.0909 153.702 39.3182C153.702 41.1818 154.145 42.7841 155.031 44.125C155.94 45.4432 157.099 46.5455 158.509 47.4318C159.918 48.2955 161.395 49.0114 162.94 49.5795C164.486 50.125 165.906 50.5682 167.202 50.9091L174.293 52.8182C176.111 53.2955 178.134 53.9545 180.361 54.7955C182.611 55.6364 184.759 56.7841 186.804 58.2386C188.872 59.6705 190.577 61.5114 191.918 63.7614C193.259 66.0114 193.929 68.7727 193.929 72.0455C193.929 75.8182 192.94 79.2273 190.963 82.2727C189.009 85.3182 186.145 87.7386 182.372 89.5341C178.622 91.3295 174.065 92.2273 168.702 92.2273C163.702 92.2273 159.372 91.4205 155.713 89.8068C152.077 88.1932 149.213 85.9432 147.122 83.0568C145.054 80.1705 143.884 76.8182 143.611 73H152.338C152.565 75.6364 153.452 77.8182 154.997 79.5455C156.565 81.25 158.543 82.5227 160.929 83.3636C163.338 84.1818 165.929 84.5909 168.702 84.5909C171.929 84.5909 174.827 84.0682 177.395 83.0227C179.963 81.9545 181.997 80.4773 183.497 78.5909C184.997 76.6818 185.747 74.4545 185.747 71.9091C185.747 69.5909 185.099 67.7045 183.804 66.25C182.509 64.7955 180.804 63.6136 178.69 62.7045C176.577 61.7955 174.293 61 171.838 60.3182L163.247 57.8636C157.793 56.2955 153.474 54.0568 150.293 51.1477C147.111 48.2386 145.52 44.4318 145.52 39.7273C145.52 35.8182 146.577 32.4091 148.69 29.5C150.827 26.5682 153.69 24.2955 157.281 22.6818C160.895 21.0455 164.929 20.2273 169.384 20.2273C173.884 20.2273 177.884 21.0341 181.384 22.6477C184.884 24.2386 187.656 26.4205 189.702 29.1932C191.77 31.9659 192.861 35.1136 192.974 38.6364H184.793Z"
+          stroke="#fff"
+          stroke-width="6"
+          mask="url(#path-1-outside-1_2_5)"
+        />
+        <path
+          d="M205.17 13.1023V3.72727H270.625V13.1023H243.182V91H232.614V13.1023H205.17Z"
+          stroke="#4f53c5"
+          stroke-width="6"
+          mask="url(#path-1-outside-1_2_5)"
+        />
+        <path
+          d="M284.822
+      91V21.1818H326.958V28.6818H293.276V52.2727H324.776V59.7727H293.276V83.5H327.504V91H284.822Z"
+          stroke="#4F53C5"
+          stroke-width="6"
+          mask="url(#path-1-outside-1_2_5)"
+        />
+        <path
+          d="M398.379 43H389.924C389.424 40.5682 388.549 38.4318 387.299 36.5909C386.072 34.75 384.572 33.2045 382.799 31.9545C381.049 30.6818 379.106 29.7273 376.969 29.0909C374.833 28.4545 372.606 28.1364 370.288 28.1364C366.06 28.1364 362.231 29.2045 358.799 31.3409C355.39 33.4773 352.674 36.625 350.651 40.7841C348.651 44.9432 347.651 50.0455 347.651 56.0909C347.651 62.1364 348.651 67.2386 350.651 71.3977C352.674 75.5568 355.39 78.7045 358.799 80.8409C362.231 82.9773 366.06 84.0455 370.288 84.0455C372.606 84.0455 374.833 83.7273 376.969 83.0909C379.106 82.4545 381.049 81.5114 382.799 80.2614C384.572 78.9886 386.072 77.4318 387.299 75.5909C388.549 73.7273 389.424 71.5909 389.924 69.1818H398.379C397.742 72.75 396.583 75.9432 394.901 78.7614C393.219 81.5795 391.129 83.9773 388.629 85.9545C386.129 87.9091 383.322 89.3977 380.208 90.4205C377.117 91.4432 373.81 91.9545 370.288 91.9545C364.333 91.9545 359.038 90.5 354.401 87.5909C349.765 84.6818 346.117 80.5455 343.458 75.1818C340.799 69.8182 339.469 63.4545 339.469 56.0909C339.469 48.7273 340.799 42.3636 343.458 37C346.117 31.6364 349.765 27.5 354.401 24.5909C359.038 21.6818 364.333 20.2273 370.288 20.2273C373.81 20.2273 377.117 20.7386 380.208 21.7614C383.322 22.7841 386.129 24.2841 388.629 26.2614C391.129 28.2159 393.219 30.6023 394.901 33.4205C396.583 36.2159 397.742 39.4091 398.379 43Z"
+          stroke="#4F53C5"
+          stroke-width="6"
+          mask="url(#path-1-outside-1_2_5)"
+        />
+        <path
+          d="M412.04 91V21.1818H420.495V52.2727H457.722V21.1818H466.177V91H457.722V59.7727H420.495V91H412.04Z"
+          stroke="#4F53C5"
+          stroke-width="6"
+          mask="url(#path-1-outside-1_2_5)"
+        />
+      </svg>
+    </div>
+    <!-- end landing -->
+    <div class="body">
+      <header class="text-slate-900 shadow-lg" id="#nav">
+        <!-- slider -->
+        <div
+          id="slider"
+          class="sm:hidden hidden opacity-100 bg-slate-900 fixed top-0 bottom-0 left-0 right-0 text-center font-semibold text-lg transition-all z-20 text-slate-50"
+        >
+          <ul class="flex justify-center gap-y-2 flex-col h-full">
+            <li
+              class="h-12 flex items-center justify-center hover:border hover:text-slate-200 hover:bg-slate-200 tracking-widest"
+              onclick="displaySlideBar()"
+            >
+              <a href="#home">Home</a>
+            </li>
+            <li
+              class="h-12 flex items-center justify-center hover:border hover:text-slate-800 hover:bg-slate-200 tracking-widest"
+              onclick="displaySlideBar()"
+            >
+              <a href="#about">About</a>
+            </li>
+            <li
+              class="h-12 flex items-center justify-center hover:border hover:text-slate-800 hover:bg-slate-200 tracking-widest"
+              onclick="displaySlideBar()"
+            >
+              <a href="#services">Services</a>
+            </li>
+          </ul>
+        </div>
+        <!-- end slider -->
+        <div
+          id="navbar"
+          class="w-full lg:px-32 px-2 py-2 flex justify-between items-center tracking-wider z-20 top-0 overflow-hidden bg-slate-900"
+        >
+          <div class="font-semibold relative pl-2">
+            <div
+              class="absolute top-0 bottom-0 w-3 rounded-sm scale-y-[0.9] rotate-[30deg] bg-colorYellow"
+            ></div>
+            <a
+              class="hover:text-slate-200 cursor-pointer text-xl font-bold uppercase relative -right-[1.2rem] text-colorPurple"
+            >
+              <span class="text-slate-100">fris</span
+              ><span class="text-2xl">t</span>ech
+            </a>
+          </div>
+
+          <div
+            id="sub-nav"
+            class="w-64 font-semibold text-lg hidden sm:visible sm:flex text-slate-50"
+          >
+            <ul class="flex justify-between w-full tracking-wider gap-x-1">
+              <li class="hover:text-colorYellow">
+                <a href="#home">Home</a>
+              </li>
+              <li class="hover:text-colorYellow">
+                <a href="#about">About</a>
+              </li>
+              <li class="hover:text-colorYellow">
+                <a href="#services">Services</a>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            id="toggle"
+            class="sm:hidden relative z-40"
+            onclick="displaySlideBar()"
+          >
+            <ul
+              class="w-8 h-6 flex flex-col justify-around cursor-pointer items-end"
+            >
+              <li class="bg-slate-100 w-full h-1 transition-all"></li>
+              <li class="bg-slate-100 w-[70%] h-1 transition-all"></li>
+              <li class="bg-slate-100 w-full h-1 transition-all"></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <main class="relative lg:px-32 text-slate-900 px-4">
+        <section
+          id="home"
+          class="flex flex-col sm:flex-row pt-20 sm:mt-10 justify-between"
+        >
+          <div class="order-2 sm:order-1">
+            <h1 class="text-2xl md:text-3xl font-bold uppercase">
+              a solution to digitize
+            </h1>
+            <p class="sm:mt-2 text-sm md:text-lg leading-6 text-justify">
+              <span class="inline-block"
+                >Currently, the world has entered a digital era in almost all
+                aspects we discover the role of technology in making life easier
+                man. one of the technologies that change conventional ways
+                community in living life is by the presence of the internet that
+                is getting more massive every year, it used to be only found in
+                urban centers now present in some rural areas.
+              </span>
+              <span class="hidden transition-all">
+                Conventional behavior that is starting to be replaced is a
+                process of buying and selling have become all digital even now
+                people don't need it have a place of sale that is physically
+                visible but only need a website or application instead because
+                of things That's what FirstTeck or first technology is here as a
+                solution which provides website creation for SMEs in selling
+                their products.</span
+              >
+            </p>
+            <button
+              id="button"
+              class="px-8 py-1 mt-4 border-2 border-slate-900 hover:bg-slate-900 font-semibold text-sm md:text-lg rounded-sm hover:text-slate-50 shadow-sm"
+            >
+              Learn More
+            </button>
+          </div>
+        </section>
+        <section id="about" class="mt-10 sm:mt-28 flex flex-col">
+          <div>
+            <h1
+              class="text-xl md:text-3xl font-bold text-center tracking-wider capitalize"
+            >
+              why <span class="uppercase">fristech</span>
+            </h1>
+          </div>
+          <div class="w-full">
+            <figure>
+              <img
+                src="./image/team work.jpg"
+                alt=""
+                class="w-4/5 sm:w-3/5 mt-5 mx-auto shadow-md"
+              />
+              <figcaption class="mt-5">
+                <p class="sm:mt-2 text-sm md:text-lg leading-6 text-justify">
+                  <span class="uppercase">fristech</span> is a service website
+                  creation at affordable prices and has quality premium. This is
+                  because in our manufacturing process using the latest
+                  technologies so that the website generated has a better
+                  performance than the website generally because it is made by
+                  competent parties in their field. we have a very good team so
+                  that in The process of creating a website does not take long.
+                  we provides several services that you can choose from in the
+                  lower.
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+        <section
+          id="services"
+          class="flex flex-col mt-10 sm:mt-28 capitalize font-bold text-slate-900"
+        >
+          <div>
+            <h1
+              class="text-xl md:text-3xl font-bold text-center tracking-wider text-slate-900"
+            >
+              Services
+            </h1>
+          </div>
+          <div
+            id="card"
+            class="flex flex-col sm:flex-row sm:gap-x-4 gap-y-3 sm:gap-y-5 mt-3 sm:mt-5 w-full justify-center"
+          >
+            <div
+              class="md:w-60 md:h-80 sm:w-52 sm:h-72 px-3 relative transition-all rounded-sm border shadow-xl"
+              style="background-color: white"
+            >
+              <div
+                class="bottom-0 top-0 left-0 right-0 absolute opacity-5 z-10"
+              ></div>
+              <h3
+                class="text-lg w-full h-full flex items-center justify-center md:text-2xl"
+              >
+                UI/UX
+              </h3>
+              <div
+                class="absolute top-0 bottom-0 left-0 right-0 pt-8 sm:pt-2 md:p-2 hidden -scale-x-100 w-full"
+              >
+                <ul
+                  class="flex flex-col text-sm justify-between h-full list-disc px-3"
+                >
+                  <div class="flex flex-col gap-y-[2px] sm:gap-y-2 pl-6">
+                    <li>modern desain</li>
+                    <li>file yang didapatkan (JPG/PNG/PDF)</li>
+                    <li>revisi 2 kali</li>
+                    <li>hasil 2 halaman</li>
+                    <li>dapat melakukan negosiasi</li>
+                  </div>
+                  <div class="py-1 flex sm:flex-col gap-x-6">
+                    <div>mulai dari :</div>
+                    <div class="text-xl">Rp 49.999,00</div>
+                  </div>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="md:w-60 md:h-80 sm:w-52 sm:h-72 px-3 relative transition-all rounded-sm border shadow-xl"
+              style="background-color: white"
+            >
+              <div
+                class="bottom-0 top-0 left-0 right-0 absolute opacity-5 z-10"
+              ></div>
+              <h3
+                class="text-lg md:text-2xl w-full h-full flex items-center justify-center"
+              >
+                Wordpress
+              </h3>
+              <div
+                class="absolute top-0 bottom-0 left-0 right-0 pt-8 sm:pt-2 md:p-2 hidden -scale-x-100 w-full"
+              >
+                <ul
+                  class="flex flex-col px-3 text-sm justify-between h-full items-center"
+                >
+                  <li>belum tersedia</li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="md:w-60 md:h-80 sm:w-52 sm:h-72 px-3 relative transition-all rounded-sm border shadow-xl"
+              style="background-color: white"
+            >
+              <div
+                class="bottom-0 top-0 left-0 right-0 absolute opacity-5 z-10"
+              ></div>
+              <h3
+                class="text-lg w-full h-full flex items-center justify-center md:text-2xl"
+              >
+                Web Developer
+              </h3>
+              <div
+                class="absolute top-0 bottom-0 left-0 right-0 pt-8 sm:pt-2 md:p-2 hidden -scale-x-100 w-full"
+              >
+                <ul
+                  class="flex flex-col px-3 text-sm justify-between h-full list-disc"
+                >
+                  <div class="flex flex-col gap-y-[2px] sm:gap-y-2 pl-6">
+                    <li>3 menu : home, profil, produk</li>
+                    <li>Domain .id</li>
+                    <li>responsif web desain</li>
+                    <li>teknologi terbaru</li>
+                    <li>user friendly</li>
+                    <li>dapat melakukan negosiasi</li>
+                  </div>
+                  <div class="py-1 flex sm:flex-col gap-x-6">
+                    <div>mulai dari :</div>
+                    <div class="text-xl">Rp 799.999,00</div>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          id="sec-4"
+          class="flex flex-col mt-10 sm:mt-28 capitalize font-bold"
+        >
+          <div>
+            <h1 class="text-xl md:text-3xl text-center tracking-wider">
+              teams
+            </h1>
+          </div>
+          <div class="flex relative items-center justify-center">
+            <div id="contentSlider" class="mt-5">
+              <div class="relative flex justify-center items-center gap-x-4">
+                <div class="flex flex-col">
+                  <div class="relative rounded-full overflow-hidden shadow-2xl">
+                    <img src="./image/ibnu.jpeg" alt="" class="w-28 md:w-32" />
+                    <div
+                      class="absolute top-0 bottom-0 left-0 right-0 bg-slate-900 opacity-20 transition-all hover:opacity-0"
+                    ></div>
+                  </div>
+                  <p class="text-center text-xl font-semibold">CRO</p>
+                </div>
+                <div class="flex flex-col">
+                  <div class="relative rounded-full overflow-hidden shadow-2xl">
+                    <img
+                      src="./image/tangguh.jpeg"
+                      alt=""
+                      class="w-28 md:w-32"
+                    />
+                    <div
+                      class="absolute top-0 bottom-0 left-0 right-0 bg-slate-900 opacity-20 transition-all hover:opacity-0"
+                    ></div>
+                  </div>
+                  <p class="text-center text-xl font-semibold">CEO</p>
+                </div>
+                <div class="flex flex-col">
+                  <div class="relative rounded-full overflow-hidden shadow-2xl">
+                    <img src="./image/aqil.jpeg" alt="" class="w-28 md:w-32" />
+                    <div
+                      class="absolute top-0 bottom-0 left-0 right-0 bg-slate-900 opacity-20 transition-all hover:opacity-0"
+                    ></div>
+                  </div>
+                  <p class="text-center text-xl font-semibold">CMO</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end image slider -->
+
+        <section id="reviews" class="mt-10 sm:mt-28 px-8 sm:p-0">
+          <h1
+            class="text-xl md:text-3xl font-bold text-center tracking-wider capitalize"
+          >
+            reviews
+          </h1>
+          <div class="mt-4 md:px-10 shadow-md">
+            <div class="splide">
+              <div class="splide__slider">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <div
+                        class="flex flex-col items-center text-slate-900 p-4 h-72 justify-between rounded-sm shadow-xl"
+                        style="background-color: white"
+                      >
+                        <div class="flex flex-col items-center">
+                          <img
+                            src="./image/cilent.png"
+                            alt=""
+                            class="w-20 rounded-full"
+                          />
+                          <figcaption class="font-semibold mt-4">
+                            Recommended banget untuk jasa pembuatan website ini,
+                            selain desainnya yang menarik, penggunaannya pun
+                            juga mudah.
+                          </figcaption>
+                        </div>
+                        <span class="font-bold">Daniel Kurniawan Lukman</span>
+                      </div>
+                    </li>
+                    <li class="splide__slide">
+                      <div
+                        class="flex flex-col items-center bg-slate-300 text-slate-900 p-4 h-72 justify-between rounded-sm shadow-xl"
+                        style="background-color: white"
+                      >
+                        <div class="flex flex-col items-center">
+                          <img
+                            src="./image/client1.jpeg"
+                            alt=""
+                            class="w-20 rounded-full"
+                          />
+                          <figcaption class="font-semibold mt-2">
+                            Puji Tuhan🙏dengan adanya website di usaha saya,
+                            cukup banyak consumen saya yang merasa terbantu.
+                          </figcaption>
+                        </div>
+                        <span class="font-bold">Basuiki Puspoputro</span>
+                      </div>
+                    </li>
+                    <li class="splide__slide">
+                      <div
+                        class="flex flex-col items-center text-slate-900 p-4 h-72 justify-between rounded-sm shadow-xl"
+                        style="background-color: white"
+                      >
+                        <div class="flex flex-col items-center">
+                          <img
+                            src="./image/cilent.png"
+                            alt=""
+                            class="w-20 rounded-full"
+                          />
+                          <figcaption class="font-semibold mt-4">
+                            Maksimal atau tidak penggunaan website balik lagi
+                            dari seberapa inovatif owner dalam memaksimalkannya.
+                          </figcaption>
+                        </div>
+                        <span class="font-bold">Calvin Lukmantara</span>
+                      </div>
+                    </li>
+                    <li class="splide__slide">
+                      <div
+                        class="flex flex-col items-center text-slate-900 p-4 h-72 justify-between rounded-sm shadow-xl"
+                        style="background-color: white"
+                      >
+                        <div class="flex flex-col items-center">
+                          <img
+                            src="./image/client2.jpeg"
+                            alt=""
+                            class="w-20 rounded-full"
+                          />
+                          <figcaption class="font-semibold mt-4">
+                            Cs nya ramah👍. kita juga bisa konsultasi dulu
+                            sebelum membuat web, jadi kita tahu apa yang
+                            sebenarnya kita butuhkan.
+                          </figcaption>
+                        </div>
+                        <span class="font-bold mt-4">Irene Tedja</span>
+                      </div>
+                    </li>
+                    <li class="splide__slide">
+                      <div
+                        class="flex flex-col items-center text-slate-900 p-4 h-72 justify-between rounded-sm shadow-xl"
+                        style="background-color: white"
+                      >
+                        <div class="flex flex-col items-center">
+                          <img
+                            src="./image/cilent.png"
+                            alt=""
+                            class="w-20 rounded-full"
+                          />
+                          <figcaption class="font-semibold mt-4">
+                            keren abis desain templatenya dan profesional bangat
+                            teamnya.
+                          </figcaption>
+                        </div>
+                        <span class="font-bold">Handojo Santosa</span>
+                      </div>
+                    </li>
+                    <li class="splide__slide">
+                      <div
+                        class="flex flex-col items-center text-slate-900 p-4 h-72 justify-between rounded-sm shadow-xl"
+                        style="background-color: white"
+                      >
+                        <div class="flex flex-col items-center">
+                          <img
+                            src="./image/cilent.png"
+                            alt=""
+                            class="w-20 rounded-full"
+                          />
+                          <figcaption class="font-semibold mt-4">
+                            Kami sangat terbantu dengan adanya website yang
+                            dibuat karena dapat menjangkau klien potensial.
+                            Terima kasih team fristech.
+                          </figcaption>
+                        </div>
+                        <span class="font-bold">Enny Lukitaning Diah</span>
+                      </div>
+                    </li>
+                    <li class="splide__slide">
+                      <div
+                        class="flex flex-col items-center text-slate-900 p-4 h-72 justify-between rounded-sm shadow-xl"
+                        style="background-color: white"
+                      >
+                        <div class="flex flex-col items-center">
+                          <img
+                            src="./image/cilent.png"
+                            alt=""
+                            class="w-20 rounded-full"
+                          />
+                          <figcaption class="font-semibold mt-4">
+                            Pembuatan website disini cepat dan amanah, harga
+                            jujur dan sesuai dengan ekspektasi.
+                          </figcaption>
+                        </div>
+                        <span class="font-bold"
+                          >Dorys Setiawati Herlambang</span
+                        >
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="mt-10 bg-slate-900 p-2 lg:px-32 text-slate-50">
+        <div class="flex justify-start gap-x-4 items-center">
+          <h3 class="text-lg font-semibold">Contact :</h3>
+          <div class="flex items-end">
+            <a href="https://www.instagram.com/firsteck">
+              <img src="./image/instagram.png" alt="" class="w-6 mr-2" />
+            </a>
+          </div>
+          <div class="flex items-end">
+            <a href="https://wa.me/081930171464">
+              <img src="./image/whatsapp.png" alt="" class="w-6 mr-2" />
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.5.0/dist/js/splide.min.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+  </body>
+</html>
