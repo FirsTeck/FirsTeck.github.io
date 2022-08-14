@@ -1,25 +1,4 @@
 /**
- * slide bar
- */
-
-const toggle = document.querySelector('#toggle')
-const slider = document.querySelector('#slider')
-const li = toggle.children[0].children
-
-const displaySlideBar = () => {
-  slider.classList.toggle('hidden')
-
-  li[0].classList.toggle('w-full')
-  li[0].classList.toggle('w-[90%]')
-
-  li[1].classList.toggle('w-[70%]')
-  li[1].classList.toggle('w-full')
-
-  li[2].classList.toggle('w-full')
-  li[2].classList.toggle('w-[70%]')
-}
-
-/**
  * card
  */
 
@@ -174,3 +153,30 @@ anime({
     landing.classList.add('border-slate-900')
   },
 })
+
+/**
+ * slide bar
+ */
+
+const toggle = document.querySelector('#toggle')
+const slider = document.querySelector('#slider')
+const li = toggle.children[0].children
+
+const displaySlideBar = () => {
+  const hiddenToTop = slider.classList.contains('hidden')
+  if (hiddenToTop === true) {
+    landing.classList.toggle('hidden')
+  } else {
+    landing.classList.toggle('hidden')
+  }
+  slider.classList.toggle('hidden')
+
+  li[0].classList.toggle('w-full')
+  li[0].classList.toggle('w-[90%]')
+
+  li[1].classList.toggle('w-[70%]')
+  li[1].classList.toggle('w-full')
+
+  li[2].classList.toggle('w-full')
+  li[2].classList.toggle('w-[70%]')
+}
